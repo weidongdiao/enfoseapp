@@ -68,15 +68,15 @@ class AccountScreen extends React.Component {
                 <View style = {styles.social}>
                     <View style = {styles.socialDetail}>
                         <Text>Following</Text>
-                        <Text>xx</Text>
+                        <Text>4</Text>
                     </View>
                     <View style = {styles.socialDetail}>
                         <Text>Followed</Text>
-                        <Text>xx</Text>
+                        <Text>21</Text>
                     </View>
                     <View style = {styles.socialDetail}>
                         <Text>Favourite</Text>
-                        <Text>xx</Text>
+                        <Text>9</Text>
                     </View>
                 </View>
                 <View style = {styles.gift}>
@@ -115,7 +115,29 @@ class AccountScreen extends React.Component {
                     
                 </View>
                 <View style = {styles.publish}>
-                    <Text>Article</Text>
+                    <View style={styles.publichContent}>
+                        <TouchableHighlight onPress={() => navigate('SocialChild')} underlayColor = "white">
+                            <View >
+                                <View style={styles.socialBodyText}>
+                                    <Text >America National Day</Text>
+                                </View>
+                                <View style={styles.socialBodyImage}>
+                                    <Image
+                                        source={require('./img/social_1.gif')}
+                                        style={{width:120, height: 120}}
+                                    />
+                                    <Image
+                                        source={require('./img/social_1.gif')}
+                                        style={{width:120, height: 120}}
+                                    />
+                                    <Image
+                                        source={require('./img/social_1.gif')}
+                                        style={{width:120, height: 120}}
+                                    />
+                                </View>
+                            </View>
+                        </TouchableHighlight>
+                    </View>
                 </View>
                 
             </View>
@@ -241,9 +263,23 @@ const styles = StyleSheet.create({
     
     publish: {
         top:-120,
-        padding:20,
+        paddingTop: 20,
     },
-    
+    publichContent: {
+        padding: 5,
+    },
+    socialBodyText: {
+        marginBottom: 10,
+        paddingLeft:5,
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+    },
+    socialBodyImage: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: 10,
+    },
     
     accountSetting: {
         flexDirection: 'row',
