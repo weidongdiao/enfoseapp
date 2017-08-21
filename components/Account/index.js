@@ -119,7 +119,7 @@ class AccountScreen extends React.Component {
                         <TouchableHighlight onPress={() => navigate('SocialChild')} underlayColor = "white">
                             <View >
                                 <View style={styles.socialBodyText}>
-                                    <Text >America National Day</Text>
+                                    <Text >American National Day</Text>
                                 </View>
                                 <View style={styles.socialBodyImage}>
                                     <Image
